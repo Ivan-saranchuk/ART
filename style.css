@@ -45,11 +45,25 @@ body{
 .wrapper{
 min-height: 100%;
 overflow: hidden;
+display: flex;
+flex-direction: column;
 }
 ._conteiner {
     max-width: 1046px;
     padding: 0px 15px;
     margin: 0px auto;
+    box-sizing: content-box;
+}
+._ibg{
+    position: relative;
+}
+._ibg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 /*------------ШАПКА САЙТА--------------------------------------*/
@@ -104,7 +118,7 @@ overflow: hidden;
     margin: 0px 21px 0px 0px;
 }
 .menu__link{
-    color: lightblue;
+    color: rgb(253, 253, 253);
     line-height: 171%;
     font-weight: 600;
 }
@@ -119,7 +133,10 @@ overflow: hidden;
         min-height: 70px;
     }
     }
-  
+ /*------------PAGE--------------------------------------*/ 
+ .page{
+     flex: 1 1 auto;
+ }
     
 /*------------MAIN--------------------------------------*/
 .main{
@@ -128,5 +145,59 @@ overflow: hidden;
 }    
 /*------------ПОДВАЛ САЙТА--------------------------------------*/
 .footer{
+
+}
+.main-block{
+    position: relative;
+}
+.main-block__body{
+    padding: 184px 0px 191px 0px;
+    position: relative;
+    z-index: 2;
+    max-width: 509 px;
+}
+
+.main-block__body > *:not(:last-child){
+    margin: 0px 0px 35px 0px;
+}
+
+.main-block__title{
+    font-size: 58;
+    line-height: 137%;
+    letter-spacing: 0.2px;
+    font-weight: 800;
+
+   
+}
+.main-block__text{
+    color: green;
+    font-size: 20px;
+    line-height: 150%;
+}
+.main-block__buttons{
+    display: inline-flex;
+}
+.main-block__button{
+    background: mediumvioletred;
+    border-radius: 37px;
+    display: flex;
+    min-height: 48;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.2px;
+    padding: 5px 36px;
+    color: mintcream;
+    line-height: 150%;
+    font-weight: 700;
+}
+.main-block__buttons_border{
+
+}
+.main-block__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 
 }
